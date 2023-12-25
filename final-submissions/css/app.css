@@ -1,0 +1,270 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    /* border: 1px solid #1F1F1F; */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    margin: 0;
+    color: #1F1F1F;
+}
+
+/* ------------------------------------------------------ */
+
+header {
+    width: 100%;
+    background-color: #20A7A1;
+    position: fixed;
+    margin: 0 auto;
+    top: 0;
+}
+
+header .navbar-container {
+    max-width: 1000px;
+    margin-inline: auto;
+    padding-block: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+}
+
+header .navbar-container .logo {
+    padding: 0.5rem;
+}
+
+header .navbar-container .logo img {
+    width: 150px;
+}
+
+header .navbar-container .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+header .navbar-container .nav-list li {
+    list-style-type: none;
+}
+
+header .navbar-container .nav-list a {
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #E2E7E2;
+    transition: all 0.2s ease-in-out;
+}
+
+header .navbar-container .nav-list li:hover a {
+    color: #0e5f60;
+}
+
+/* ------------------------------------------------------ */
+
+main {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #E2E7E2;
+}
+
+main .slider img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+main .fill-content {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    justify-content: center;
+    align-items: flex-start;
+    padding-block: 1rem;
+    margin-inline: auto;
+    gap: 1.5rem;
+}
+
+main .content {
+    flex: 4;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+main .fill-content .content .subject {
+    text-align: center;
+}
+
+
+table,
+th,
+td {
+    border: 1px solid #1F1F1F;
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th.satu {
+    width: 10%;
+}
+
+th.dua {
+    width: 45%;
+}
+
+th.tiga {
+    width: 45%;
+}
+
+/* ------------------------------------------------------ */
+
+aside {
+    flex: 1;
+    text-align: center;
+
+}
+
+aside .sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar img {
+    width: 300px;
+}
+
+/* ------------------------------------------------------ */
+
+/* BAGIAN FOOTER */
+footer {
+    width: 100%;
+    background-color: #20A7A1;
+}
+
+footer .footer-container {
+    max-width: 1000px;
+    padding-block: 1rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #E2E7E2;
+}
+
+footer .social-media ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+footer .social-media ul li {
+    list-style-type: none;
+}
+
+footer .social-media ul li a {
+    padding: 0.25rem 0.5rem;
+    text-decoration: none;
+    color: #20A7A1;
+    background-color: #E2E7E2;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+footer .social-media ul li:hover a {
+    color: #E2E7E2;
+    background-color: #0e5f60;
+}
+
+/* ------------------------------------------------------ */
+
+@media screen and (max-width: 1200px) {
+
+    header .navbar-container {
+        max-width: 700px;
+    }
+
+    main .fill-content {
+        max-width: 700px;
+    }
+
+    main .fill-content {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+        justify-content: center;
+    }
+
+    aside .sidebar {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .sidebar img {
+        width: 250px;
+    }
+
+    footer .footer-container {
+        max-width: 700px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header .navbar-container {
+        max-width: 500px;
+        flex-direction: column;
+    }
+
+    main .fill-content {
+        max-width: 500px;
+    }
+
+    main .content {
+        text-align: center;
+    }
+
+    main .content li {
+        text-align: left;
+    }
+
+    aside {
+        width: 100%;
+        justify-content: center;
+    }
+
+    aside .sidebar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer .footer-container {
+        max-width: 500px;
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    header .navbar-container .nav-list ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .footer-container {
+        text-align: center;
+    }
+
+    aside {
+        display: none;
+    }
+}
